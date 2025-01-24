@@ -1,0 +1,199 @@
+ body {
+    background-color: rgb(31, 31, 31);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+ }
+
+  .cabezado {
+    background-color: rgb(61, 61, 61);
+    border-bottom: 0.2em solid white;
+ }
+
+ .titulo {
+    display: flex;
+    justify-content: center;
+    color: rgb(240, 248, 255);
+    font-size: 1.6em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 0.4em;
+    text-decoration-thickness: 0.15em;
+ }
+
+ .contenido {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 1.5em;
+    gap: 5em;
+    margin-bottom: 2em;
+ }
+
+ .todos button, .primero button, .agregar button{
+    color: rgb(240, 248, 255);
+    background-color: rgb(82, 162, 236);
+    padding: 1em;
+    font-size: 1em;
+    width: 18em;
+    border: none;
+    border-radius: 0.5em;
+ }
+
+ .busqueda {
+    display: flex;
+    gap: 0.7em;
+ }
+
+ .busqueda input {
+    padding: 1em;
+    border: none;
+    border-radius: 0.5em;
+    outline: none;
+    width: 10em;
+    font-size: 1em;
+ }
+
+ .busqueda button {
+    padding: 1em;
+    color: rgb(240, 248, 255);
+    background-color: rgb(82, 162, 236);
+    border: none;
+    width: 7em;
+    border-radius: 0.5em;
+    transition: transform 0.2s ease;
+ }
+
+ button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(82, 162, 236);
+    font-weight: bold;
+ }
+
+ .contenedor-cartas {
+   display: grid;
+   justify-content: center;
+   align-items: start;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 1.5rem;
+   padding: 2rem;
+   width: 100%;
+   max-width: 80%;
+   margin: 0 auto;
+}
+
+.carta {
+   width: 100%;
+   height: 100%;
+   border-radius: 0.6rem;
+   overflow: hidden;
+   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+   background-color: rgb(39, 39, 39);
+   transition: box-shadow 0.3s;
+}
+
+.carta:hover {
+   box-shadow: 0 0 1.25rem 0.3125rem rgba(150, 150, 150, 0.5), 0 0 1.875rem 0.625rem rgba(54, 54, 54, 0.5);
+}
+
+.carta-encabezado {
+   background: linear-gradient(45deg, #dbdbdb, #ffffff);
+   padding: 0.2rem;
+   text-align: center;
+}
+
+.carta-encabezado img {
+   width: 10rem;
+   height: 10rem;
+}
+
+.carta-cuerpo {
+   padding: 1.5rem;
+   text-align: center;
+}
+
+.carta-cuerpo h2 {
+   margin: 0.6rem 0 0.2rem;
+   font-size: 1.5rem;
+   color: #fff;
+   text-align: start;
+}
+
+.carta-cuerpo p {
+   text-align: start;
+   color: #dfdfdf;
+   margin: 1% 0;
+}
+
+/* ESTILOS DE LOS MODALES */
+.modal {
+   display: none; 
+   position: fixed;
+   z-index: 1; 
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-contenido {
+   position: relative; 
+   background-color: #161616;
+   margin: 15% auto; 
+   padding: 2rem;
+   border: 1px solid #888;
+   width: 50%; 
+   max-width: 40rem; 
+   color: white;
+   border-radius: 0.6rem;
+   box-shadow: 0 0 0.625rem rgba(255, 255, 255, 0.5), 0 0 1.25rem rgba(201, 201, 201, 0.5); 
+}
+
+.cerrar {
+   color: white;
+   font-size: 2rem;
+   font-weight: bold;
+   position: absolute;
+   top: 1rem; 
+   right: 1.5rem; 
+}
+
+.cerrar:hover,
+.cerrar:focus {
+   color: #6095f7;
+   cursor: pointer;
+}
+
+label {
+   display: block;
+   margin: 0.6rem 0 0.3rem;
+}
+
+.inputModal {
+   width: 90%;
+   padding: 1rem;
+   margin-bottom: 1.2rem;
+   background-color: transparent;
+   color: #fff;
+   border: 1px solid #ccc;
+   border-radius: 0.4rem;
+}
+
+.bt-modal {
+   padding: 1rem;
+   background: linear-gradient(163deg, #4b4b4b, #313131);
+   color: white;
+   border: none;
+   border-radius: 0.4rem;
+   cursor: pointer;
+   font-size: 1rem; 
+   transition: background-color 0.3s; 
+}
+
+.bt-modal:hover {
+   color: white;
+   background: linear-gradient(163deg, #00d9ff, #3700ff);
+   box-shadow: 0 0 0.625rem rgba(0, 255, 234, 0.5), 0 0 1.25rem rgba(55, 0, 255, 0.5); 
+}
