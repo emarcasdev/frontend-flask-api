@@ -4,7 +4,7 @@ $(document).ready(function () {
     $(".contenedor-cartas").empty();
     // Hecemos una petición AJAX
     $.ajax({
-      url: "http://127.0.0.1:5000/api/users",
+      url: "https://backend-flask-api-one.vercel.app/api/users",
       method: "GET",
       success: function (users) {
         console.log("Usuario obtenido:", users);
@@ -24,7 +24,7 @@ $(document).ready(function () {
     $(".contenedor-cartas").empty();
     // Hecemos una petición AJAX
     $.ajax({
-      url: "http://127.0.0.1:5000/api/user1",
+      url: "https://backend-flask-api-one.vercel.app/api/user1",
       method: "GET",
       success: function (user) {
         console.log("Usuario obtenido:", user);
@@ -43,7 +43,7 @@ $(document).ready(function () {
     let id = $(".busqueda input").val();
     // Hecemos una petición AJAX
     $.ajax({
-      url: "http://127.0.0.1:5000/api/user?id=" + id,
+      url: "https://backend-flask-api-one.vercel.app/api/user?id=" + id,
       method: "GET",
       success: function (user) {
         console.log("Usuario obtenido:", user);
@@ -107,7 +107,7 @@ $(document).ready(function () {
 
     // Hacemos una petición AJAX
     $.ajax({
-      url: "http://127.0.0.1:5000/api/users", 
+      url: "https://backend-flask-api-one.vercel.app/api/users", 
       method: "POST",
       contentType: "application/json", 
       data: JSON.stringify(nuevoUsuario),
